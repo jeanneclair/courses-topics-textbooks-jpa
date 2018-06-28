@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Courses</title>
+</head>
+<body>
+<ul>
+		<li th:each="course : ${courses}">
+			<a th:href="|@{/courses/}${course.id}|">
+				<span th:text="${course.title} + ': '"></span>
+				<span th:text="${course.description}"></span>
+			</a>
+		</li>
+</ul>
+</body>
+</html>

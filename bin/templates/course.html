@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title th:text="${course.title}"></title>
+</head>
+<body>
+	<h1 th:text="${course.title}"></h1>
+
+	<a href="/courses.html" th:href="@{/courses}">Back to Courses</a>
+
+	<p th:text="${course.description}"></p>
+	<p th:each = "topic : ${course.topics}" th:text="${topic}"></p>
+	<p th:each = "textbook : ${course.textbooks}" th:text="${textbook}"></p>
+
+
+	
+
+</body>
+</html>
